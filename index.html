@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.m1{
+			perspective: 1000px;
+			transform-style: preserve-3d;
+		}
+		.mofang{
+			height: 200px;
+			width: 200px;
+			margin: 200px auto;
+			position: relative;
+			transition: all 5s;
+			transform-style: preserve-3d;
+			
+			
+		}
+		.mofang div{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			opacity: 0.6;
+			border: 1px solid #000;
+		    transition: all 5s;
+			
+		}
+		
+		.front{
+			background: url(img/1.jpg);
+			background-size: 100% 100%;
+			transform:rotateY(180deg) translateZ(100px);
+		}
+		.back{
+			background: url(img/2.jpeg);
+			background-size: 100% 100%;
+			transform: rotateY(180deg) translateZ(-100px);
+		}
+		.left{
+			background: url(img/3.jpg);
+			background-size: 100% 100%;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.right{
+			background: url(img/4.jpg);
+			background-size: 100% 100%;
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.top{
+			background: url(img/5.jpg);
+			background-size: 100% 100%;
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.bottom{
+			background: url(img/6.jpg);
+			background-size: 100% 100%;
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		.m1:hover .mofang{
+			transform:rotate3d(-1,1,0,360deg) scale3d(2,2,2);
+			transition: all linear 5s;
+		}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="m1">
+			<div class="mofang">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+	</body>
+</html>
